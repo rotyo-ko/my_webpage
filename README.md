@@ -21,17 +21,6 @@ viewsはFBVで実装していますが、学習として同じ動作ができる
   .env.exampleを参考に.envを設定してください。そのままでしたらSQLite3で実行できます。
   
 
-## SECRET_KEY の設定
-
-Django を起動するには SECRET_KEY が必要です。<br>
-
-以下のコマンドを実行して、表示された文字列を .env のSECRET_KEY に設定してください。
-
-
-```bash
-python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())" 
-```
-
 ## 導入方法
 
   
@@ -40,6 +29,9 @@ git clone https://github.com/rotyo-ko/my_webpage
 # git がないときは zipファイルをダウンロードしてください。
 
 cd my_webpage
+
+# .env の作成
+# .env.example をコピーして .env を作成してください
 
 # 仮想環境の作成
 python -m venv venv
@@ -50,7 +42,18 @@ source venv/bin/activate # Mac
 
 # パッケージのインストール
 pip install -r requirements.txt
+```
+## SECRET_KEY の設定
 
+Django を起動するには SECRET_KEY が必要です。
+
+以下のコマンドを実行して、表示された文字列を .env のSECRET_KEY に設定してください。
+
+
+```bash
+python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())" 
+```
+```bash
 # マイグレーション と　サーバー起動
 python manage.py migrate
 python manage.py runserver
