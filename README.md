@@ -15,10 +15,10 @@ views は FBV で実装していますが、学習として同じ動作ができ
 
 ## データベースについて
 
-  開発はPostgreSQLでおこないましたが、このリポジトリではSQLiteを使用しています。
+  開発は PostgreSQL でおこないましたが、このリポジトリでは SQLite を使用しています。
   
-  また、環境変数の管理にdjango-environを導入しているので.envを設定していただければPostgreSQLでも実行できるようになっています。
-  .env.exampleを参考に.envを設定してください。そのままでしたらSQLiteで実行できます。
+  また、環境変数の管理に django-environ を導入しているので.envを設定していただければ PostgreSQL でも実行できるようになっています。
+  .env.example を参考に .env を設定してください。そのままでしたら SQLiteで 実行できます。
   
 
 ## 導入方法
@@ -68,7 +68,7 @@ http://127.0.0.1:8000/api/comments
 http://127.0.0.1:8000/api/my-comments
 
 ## テストの実行
-ブラウザ、WebAPIのテストがあります
+ブラウザ、Web APIのテストがあります
 ```bash
 python manage.py test
 ```
