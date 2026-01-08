@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}編集ページ{% endblock %}
+
+{% block head %}
+  <h1 class="mb-3 fw-bold">編集ページ</h1>
+{% endblock %}
+    
+{% block content %}
+  <div class="card p-4 mb-4 shadow-sm mx-4 m-10">
+    <h5 class="mb-3 border-bottom pb-2">編集フォーム</h5>
+      <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div>
+          <button type="submit" class="btn btn-primary">編集</button>
+        </div>
+      </form>
+  </div>
+
+
+
+{% endblock %}

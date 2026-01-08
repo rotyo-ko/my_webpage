@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}ログアウトページ{% endblock %}
+
+{% block head %}
+  <h1 class="mb-3 fw-bold">ログアウトページ</h1>
+{% endblock %}
+    
+{% block content %}
+<div class="card p-4 mb-4 shadow-sm mx-4">
+      <form method="post">
+        {% csrf_token %}
+
+      <button class="btn btn-primary" type="submit">ログアウト</button>
+      </form>
+    </div>
+{% endblock %}
+

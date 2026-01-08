@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}削除確認{% endblock %}
+
+{% block head %}
+  <h1 class="mb-3 fw-bold">削除確認</h1>
+{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm my-5 py-3 mx-5">
+  <form method="post">
+    <div class="me-auto mx-5 my-1">
+    <strong>本当に削除しますか？</strong>
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary my-2">削除</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
