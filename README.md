@@ -35,12 +35,25 @@ cd my_webpage
 
 # 仮想環境の作成
 python -m venv venv
-  
-# 仮想環境の有効化
-venv\Scripts\activate  # Windows
-source venv/bin/activate # Mac
+```
 
-# パッケージのインストール
+## 仮想環境の有効化
+### Windows (コマンドプロンプト)
+```bash
+venv\Scripts\activate
+```
+
+### Windows PowerShell
+```bash
+.\venv\Scripts\Activate.ps1
+```
+### macOS / Linux (bash/zsh)
+```bash
+source venv/bin/activate
+```
+
+## パッケージのインストール
+```bash
 pip install -r requirements.txt
 ```
 ## SECRET_KEY の設定
@@ -53,8 +66,9 @@ Django を起動するには SECRET_KEY が必要です。
 ```bash
 python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())" 
 ```
-```bash
-# マイグレーション と　サーバー起動
+
+## マイグレーション と　サーバー起動
+```basg
 python manage.py migrate
 python manage.py runserver
 ```
